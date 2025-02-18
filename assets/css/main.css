@@ -70,6 +70,69 @@
   border-radius: 10px; 
   box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.2); 
 }
+.weather-popup {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather-popup h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.weather-popup img {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-popup p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between boxes */
+  justify-content: center;
+}
+
+
+
+.feature-box {
+  width: 300px; /* Consistent width */
+  height: 200px; /* Fixed height for consistency */
+  background-color: white;
+  border: 2px solid #add8e6; /* Light blue border */
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Hide any text overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space content */
+}
+.feature-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  flex-grow :1;
+  white-space: normal;
+}
+
+/* Add hover effect to the boxes */
+.feature-box:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 body {
   color: var(--default-color);
@@ -1543,11 +1606,14 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
+  visibility: hidden;
+ 
+  
 }
 
 .faq .faq-container .faq-item .faq-content p {
@@ -1579,7 +1645,7 @@ section,
 }
 
 .faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
+  max-height: 500px;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
