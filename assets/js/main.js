@@ -9,6 +9,17 @@
 (function() {
   "use strict";
 
+  // Initialize map after DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    let mapOptions = {
+      center: [12.9707848, 124.0052543],
+      zoom: 12,
+    };
+    let map = L.map('maps', mapOptions);
+    let layer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    map.addLayer(layer);
+  });
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
@@ -45,7 +56,6 @@
         mobileNavToogle();
       }
     });
-
   });
 
   /**
@@ -148,7 +158,6 @@
         }
       }, false);
     });
-
   });
 
   /**
