@@ -785,6 +785,7 @@
 .position-sticky {
   position: -webkit-sticky !important;
   position: sticky !important;
+  float: none;
 }
 
 .top-0 {

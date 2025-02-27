@@ -2076,3 +2076,44 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/*--------------------------------------------------------------
+# Smart Transportation Section Section
+--------------------------------------------------------------*/
+.smartT-descriptions{
+  top: 40px;
+  position: sticky;
+  padding: 5%;
+  /* background-color: #CFFDFF; */
+}
+.smartT-descriptions .std_1{
+  background-color: #DEFEFF;
+  padding: 4% ;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; 
+  font-size: 18px; 
+  color: #333; 
+  line-height: 1.5;
+}
+.smartT-descriptions .std_2{
+  background-color: #DEFEFF;
+  padding: 4%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; 
+  font-size: 18px; 
+  color: #333; 
+  line-height: 1.5;
+}
+.smartT-descriptions .std_3{
+  background-color: #DEFEFF;
+  padding: 4%;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif; 
+  font-size: 18px; 
+  color: #333; 
+  line-height: 1.5; 
+}
