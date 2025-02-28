@@ -1448,7 +1448,42 @@ section,
     font-size: 14px;
   }
 }
+/*--------------------------------------------------------------
+# Article Section
+--------------------------------------------------------------*/
 
+.art1MainImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Keeps content vertically centered */
+  align-items: center; /* Centers the image */
+  height: auto;  /* Adjust height based on content */
+  margin: 0;
+  padding-top: 120px;
+}
+
+.art1MainImage {
+  max-width: 35%;
+  max-height: 450px;
+  margin-bottom: 20px; /* Adds space between image and text */
+}
+
+.art1TextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures text is aligned to the left */
+  width: 80%;  /* Makes sure text isn't too wide */
+  max-width: 800px; /* Controls max width */
+  text-align: left;
+}
+b {
+  display: inline;
+}
+ 
+/* .art1content .art1heading{
+  text-align: ;
+  
+} */
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
