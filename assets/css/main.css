@@ -27,6 +27,14 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
+* {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 2px;
+  font-style: normal;
+}
+
+
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #0a0f14;  /* The default color of the main navmenu links */
@@ -1253,6 +1261,17 @@ section,
 /*--------------------------------------------------------------
 # news Section
 --------------------------------------------------------------*/
+ 
+.isotope-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-item{
+  
+  flex: 0 1 calc(33.33% - 20px); 
+  margin-bottom: 20px; 
+}
 .news .news-filters-container {
   margin-bottom: 40px;
 }
@@ -1261,7 +1280,7 @@ section,
   display: flex;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1287,13 +1306,25 @@ section,
 .news .news-filters li.filter-active {
   background-color: var(--accent-color);
   color: var(--contrast-color);
+} 
+.news-card{
+  width: 100%; /* Full width */
+  max-width: none; /* Remove max-width to allow stretching */
+  height: auto; /* Allow height to adjust based on content */
+  padding: 10px; /* Reduce padding to make it less boxy */
+  margin: 10px 0; /* Vertical spacing between items */
+  box-shadow: none; /* Remove shadow for a flatter look */
+  border-radius: 0; /* Remove rounded corners */
+  background: transparent; /* Make background transparent or set to a light color */
+  border: none; 
+
 }
 
 .news .news-card {
   background-color: var(--surface-color);
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 25px rgba(207, 208, 253, 0.05);
   transition: all 0.3s ease-in-out;
 }
 
@@ -1367,6 +1398,8 @@ section,
 
 .news .news-card .news-content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .news .news-card .news-content .category {

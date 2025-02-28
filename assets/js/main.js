@@ -6,6 +6,8 @@
 * License: https://bootstrapmade.com/license/
 */
 
+// map in urban planning
+
 (function() {
   "use strict";
 
@@ -148,8 +150,8 @@
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
+        isotopeItem.querySelector('.isotope-filters .news-article').classList.remove('news-article');
+        this.classList.add('news-article');
         initIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
