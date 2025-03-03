@@ -25,6 +25,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
+  <!-- <link href="assets/css/smart-transportation-details.css" rel="stylesheet"> -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -34,6 +35,12 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- Google JS -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AlzaSy08bJwDa1OVIs2boNx91M4M51TVaitH1oy&callback=initMap&loading=async"></script>
+
+  
+
 </head>
 
 <body class="news-details-page">
@@ -42,8 +49,6 @@
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">SmartCityxSorsogon</h1>
       </a>
 
@@ -88,91 +93,102 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- news Details Section -->
-    <section id="news-details" class="news-details section">
+    <!-- News Details Section
+    <section id="news-details" class="news-details section"> -->
 
-      <div class="container" data-aos="fade-up">
+    
+          <div class="smartT-descriptions">
+            <div class="st1_api_container">
+              <div class="std_1"> 
+                <section id="std1_map" class="std1_maps_box" style="height: 500px; width: 100%;"></section>
+                <div id="std1_t" class="std1_t_box"> 
+                  <ul id="traffic-list"></ul>
 
-        <div class="row gy-4 g-lg-5">
-          <div class="col-lg-6">
-            <img src="assets/img/news/app-1.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/product-1.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/branding-1.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/books-1.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/books-2.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/product-2.jpg" class="img-fluid mb-4" alt="">
-            <img src="assets/img/news/branding-2.jpg" class="img-fluid mb-4" alt="">
-          </div>
-
-          <!-- <div class="col-lg-6"> -->
-
-            <div class="smartT-descriptions" >
+                  <!-- <img src="assets/css/img/streetlight.jpg" alt ="image of a smart trsffic light" class="smartlight" id="str1img" >
+                  <img src="assets/css/img/saferoads.jpg" alt ="image of an empty road"
+                  class = "saferoads" id="str1img"> -->
+                  <!-- <img src="assets/css/img/saferoads.jpg" alt ="image of an empty road"> -->
+                </div><br> <br> 
+                <h2>Less Traffic, Safer Roads</h2>
+              <p>
+                See real-time traffic updates all across Sorsogon City and know the best route before you take out.
+                <ul>
+                  <li><b>Real-time traffic updates</b> - traffic density insight.</li>
+                  <li><b>Smart traffic lights</b> - AI-powered signals that adjust based on road conditions.</li>
+                  <li><b>Safer roads</b> - Better pedestrian crossings (footbridge or pedestrian overpass), clearer signs, and accident reporting systems in secluded areas.</li>
+                </ul>
+              </p>
+              </div> 
               
-                <div class ="std_1"> 
-                <h2>Less Traffic, Safer Roads </h2>
-                <p>
-                  See real time traffic updates all accross Sorsogon City and know the best route before you take out.
 
-                  <ul>
-                    <li> <b>Real time traffic updates</b> -  traffic density insight. </li>
-                    <li> <b>*Smart traffic lights* </b> - AI powered signals that adjust based on road conditions.</li>
-                    <li> <b>Safer roads</b> -  Better pedestrian crossings (foot bridge or pedestrian  overpass), clearer signs, and *accident reporting systems in secluded area*.</li>
-                  </ul>
-                </p>
+          
+
+
+<script>
+  function initMap() {
+    // Initialize map centered on Sorsogon
+    var map = new google.maps.Map(document.getElementById("std1_map"), {
+      center: { lat: 12.9738, lng: 123.9933 }, // Sorsogon City
+      zoom: 14,
+      mapTypeId: "roadmap"
+    });
+
+    // Enable real-time traffic layer
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+
+    // Enable bicycle routes
+    var bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(map);
+  }
+</script>
+
+
+
+
+
+</script>
+
+              
+               
               </div>
+
               <div class="std_2"> 
-                <h2> Better Public Transportation Experience</h2>
+                <div class="std2_container">
+                  <img src="assets/css/img/bus-stop.jpg" alt="bus stop image" class="std2_image" id="std2BusStop">
+                  <img src="assets/css/img/e-jeepney.webp" alt="image of an electrical jeepney" class="std2_image" id="std2EJeepney">
+                  <img src="assets/css/img/faresystem.jpg" alt="image of a faresystem" class="std2_image" id="std2FareSystem">
+                </div> <br> <br> 
+                <h2>Better Public Transportation Experience</h2>
                 <p>
-                  We're upgrading public transport so it’s more efficient, comfortable, and convenient specially for commuters and also to minimize traffic.
+                  We're upgrading public transport so it’s more efficient, comfortable, and convenient, especially for commuters and also to minimize traffic.
                   <ul>
-                    <li> <b>Smart Bus Stops</b> -  official loading and unloading bus stops and scheduled stops for each route. </li>
-                    <li> <b>*E-jeepneys jeepn& e-trikes* </b> - implementation of emission standards and alternative transportation for clean, quiet and eco-friendly transportation.</li>
-                    <li> <b>*Fare System*</b> -  uniformed mode of payment, pay with a tap of card.</li>
+                    <li><b>Smart Bus Stops</b> - official loading and unloading bus stops and scheduled stops for each route.</li>
+                    <li><b>E-jeepneys and e-trikes</b> - implementation of emission standards and alternative transportation for clean, quiet, and eco-friendly transportation.</li>
+                    <li><b>Fare System</b> - uniformed mode of payment, pay with a tap of a card.</li>
                   </ul>
                 </p>
               </div>
-              <!-- 🚲 More Ways to Move, More Ways to Live
-              We believe transportation should be good for both people and the planet. That’s why we’re adding:
-              ✅ Bike lanes & bike-sharing – A healthier, greener way to travel.
-              ✅ EV charging stations – Supporting electric vehicles for a cleaner future.
-              ✅ Walkable streets – Safer, wider sidewalks with shade and resting areas. -->
 
               <div class="std_3"> 
-                <h2> More Ways to Move, More Ways to Live</h2>
-                <p> We believe that transportation is not only transactional but also recreational. 
+                <div class="std3_container">
+                  <img src="assets/css/img/bikeanes.jpg" alt="bikelanes image" class="std3_image" id="std3BikeLanes">
+                  <img src="assets/css/img/Evcharging.jpg" alt="image of electrical vehicle charging station" class="std3_image" id="std3EVCharging">
+                  <img src="assets/css/img/walkablestreet.jpg" alt="image of a walkable street" class="std3_image" id="std3WalkableStreet">
+
+                </div>
+                <h2>More Ways to Move, More Ways to Live</h2>
+                <p>We believe that transportation is not only transactional but also recreational. 
                   <ul>
-                    <li> <b>Bike lanes & bike-sharing</b> -  Not just travel but also adventure and healthier move.  </li>
-                    <li> <b>*EV charging stations* </b> - Supporting electric vehicles for a cleaner future.</li>
-                    <li> <b>Walkable streets </b> - Safer, wider sidewalks with shade and resting areas.</li>
+                    <li><b>Bike lanes & bike-sharing</b> - Not just travel but also adventure and healthier movement.</li>
+                    <li><b>EV charging stations</b> - Supporting electric vehicles for a cleaner future.</li>
+                    <li><b>Walkable streets</b> - Safer, wider sidewalks with shade and resting areas.</li>
                   </ul>
                 </p>
               </div>
 
-                <!-- <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                  </div>
-                </div>
-
-                <p>
-                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-                </p>
-
-                <p>
-                  Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
-                </p>
-
-              </div> -->
-
-              <div class="news-info mt-5">
-                <h3>Project information</h3>
+              <!-- <div class="news-info mt-5">
+                <h3>Project Information</h3>
                 <ul>
                   <li><strong>Category</strong> Web design</li>
                   <li><strong>Client</strong> ASU Company</li>
@@ -180,22 +196,18 @@
                   <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
                   <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
-
           </div>
-        <!-- </div> -->
-
+        </div>
       </div>
-
-    </section><!-- /news Details Section -->
+    </section><!-- /News Details Section -->
 
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">SmartCityxSorsogon</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -205,15 +217,25 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX teams form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
+   <!-- <script>
+    // Initialize Map
+    var map = L.map('std1_map').setView([12.9738, 123.9936], 13);
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    
+    // Traffic Layer (Simulated)
+    var trafficLayer = L.tileLayer('https://{s}.tile.opentraffic.io/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenTraffic'
+    });
+    map.addLayer(trafficLayer);
+  </script> -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
